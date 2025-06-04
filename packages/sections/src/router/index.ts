@@ -17,6 +17,14 @@ export const routes = [
       title: '页脚',
     },
   },
+  {
+    path: '/logo',
+    name: 'Logo',
+    component: () => import('../playground/openeuler/TheLogo.vue'),
+    meta: {
+      title: 'logo轮播',
+    },
+  },
 ];
 
 const router = createRouter({
