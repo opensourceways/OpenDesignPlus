@@ -9,20 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.13",
-    "@opensig/opendesign": "0.0.69",
+    "@opensig/opendesign": "0.0.78",
     "@vueuse/core": "10.11.1",
-    "vue-i18n": "latest"
+    "vue": "^3.5.13",
+    "vue-i18n": "latest",
+    "vue-router": "4.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
-    "@vue/tsconfig": "^0.7.0",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5",
-    "vue-tsc": "^2.2.8",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^8.19.0",
     "prettier": "^2.7.1",
     "sass": "^1.51.0",
-    "eslint": "^8.19.0"
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^2.2.8"
   }
 }
