@@ -2,7 +2,7 @@
 import { OFigure, OLink } from '@opensig/opendesign';
 import type { PropType } from 'vue';
 
-export interface ItemLogoT {
+interface ItemLogoT {
   logo: {
     [key: string]: string;
   };

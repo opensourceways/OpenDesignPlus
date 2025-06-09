@@ -25,6 +25,14 @@ export const routes = [
       title: 'logo轮播',
     },
   },
+  {
+    path: '/banner',
+    name: 'Banner',
+    component: () => import('../playground/openeuler/TheBanner.vue'),
+    meta: {
+      title: 'banner',
+    },
+  },
 ];
 
 const router = createRouter({
