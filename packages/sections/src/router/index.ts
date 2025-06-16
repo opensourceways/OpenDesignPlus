@@ -33,6 +33,14 @@ export const routes = [
       title: 'banner',
     },
   },
+  {
+    path: '/horizontal-anchor',
+    name: 'HorizontalAnchor',
+    component: () => import('../playground/openeuler/TheHorizontalAnchor.vue'),
+    meta: {
+      title: '水平锚点',
+    },
+  },
 ];
 
 const router = createRouter({

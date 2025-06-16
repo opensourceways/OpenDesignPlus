@@ -4,8 +4,8 @@ import Section from '@openeuler/Section.vue';
 
 <template>
   <div class="playground">
-    <Section title="OPENDESIGNPLUS" footer="百度" footerHref="https://www.baidu.com/">
-      <div class="section-demo"></div>
+    <Section title="OPENDESIGNPLUS" footer="openEuler" footerHref="https://www.openeuler.org/zh/" subtitle="测试楼层">
+      <div class="section-demo">这里填写文本内容...</div>
     </Section>
   </div>
 </template>
@@ -14,7 +14,11 @@ import Section from '@openeuler/Section.vue';
 .section-demo {
   width: 100%;
   height: 200px;
-  background-color: var(--o-color-info1);
+  background-color: rgba(var(--o-kleinblue-2));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 <style lang="scss"></style>
