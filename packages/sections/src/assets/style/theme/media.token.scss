@@ -1,0 +1,40 @@
+:root {
+    @include respond-to('>pc_s') {
+        --o3-gap-10: 72px;
+        --o3-gap-9: 64px;
+        --o3-gap-8: 48px;
+        --o3-gap-7: 40px;
+        --o3-gap-6: 32px;
+        --o3-gap-5: 24px;
+        --o3-gap-4: 16px;
+        --o3-gap-3: 12px;
+        --o3-gap-2: 8px;
+        --o3-gap-1: 4px;
+    }
+
+    @include respond-to('laptop-pc_s') {
+        --o3-gap-10: 64px;
+        --o3-gap-9: 48px;
+        --o3-gap-8: 40px;
+        --o3-gap-7: 24px;
+        --o3-gap-6: 24px;
+        --o3-gap-5: 16px;
+        --o3-gap-4: 12px;
+        --o3-gap-3: 8px;
+        --o3-gap-2: 8px;
+        --o3-gap-1: 4px;
+    }
+
+    @include respond-to('<=pad') {
+        --o3-gap-10: 40px;
+        --o3-gap-9: 32px;
+        --o3-gap-8: 24px;
+        --o3-gap-7: 16px;
+        --o3-gap-6: 16px;
+        --o3-gap-5: 12px;
+        --o3-gap-4: 8px;
+        --o3-gap-3: 8px;
+        --o3-gap-2: 8px;
+        --o3-gap-1: 4px;
+    }
+}

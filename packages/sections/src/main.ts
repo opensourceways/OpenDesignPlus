@@ -4,6 +4,7 @@ import '@/assets/style/style.css';
 import '@/assets/style/base.scss';
 import '@/assets/style/theme/default-light.token.css';
 import '@/assets/style/theme/dark.token.css';
+import '@/assets/style/theme/media.token.scss';
 import '@opensig/opendesign/es/index.css';
 import App from './App.vue';
 import i18n from './i18n';

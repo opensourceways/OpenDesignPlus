@@ -26,7 +26,8 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
     <div class="section-wrapper">
       <slot name="main">
         <!-- header -->
-        <div v-if="$slots.header || props.title || props.subtitle" class="section-header" :class="{ 'is-left': !props.headerJustifyCenter }">
+        <div v-if="$slots.header || props.title || props.subtitle" class="section-header"
+          :class="{ 'is-left': !props.headerJustifyCenter }">
           <slot name="header">
             <template v-if="isArray(props.title)">
               <h2 v-for="item in props.title" :key="item" class="section-title">
@@ -70,6 +71,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 <style lang="scss" scoped>
 .app-section {
   .section-wrapper {
+    max-width: 1416px;
     margin: var(--o-gap-section) auto 0;
   }
 
@@ -89,6 +91,7 @@ const props = withDefaults(defineProps<SectionPropsT>(), {
 
   .section-header {
     &.is-left {
+
       .section-title,
       .section-subtitle {
         justify-content: start;

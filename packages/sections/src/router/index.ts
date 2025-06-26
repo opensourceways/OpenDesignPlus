@@ -41,6 +41,14 @@ export const routes = [
       title: '水平锚点',
     },
   },
+  {
+    path: '/SingleTabCard',
+    name: 'SingleTabCard',
+    component: () => import('../playground/openeuler/TheSingleTabCard.vue'),
+    meta: {
+      title: 'Tab单卡',
+    },
+  },
 ];
 
 const router = createRouter({
