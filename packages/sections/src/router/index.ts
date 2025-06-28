@@ -49,6 +49,14 @@ export const routes = [
       title: 'Tab单卡',
     },
   },
+  {
+    path: '/MultiCard',
+    name: 'MultiCard',
+    component: () => import('../playground/openeuler/TheMultiCard.vue'),
+    meta: {
+      title: '图文多卡',
+    },
+  },
 ];
 
 const router = createRouter({

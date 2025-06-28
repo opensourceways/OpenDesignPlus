@@ -1,6 +1,7 @@
 /* base */
 html,
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: none;
@@ -44,9 +45,11 @@ a {
   cursor: pointer;
   color: var(--o-color-link1);
   text-decoration: none;
+
   @include hover {
     color: var(--o-color-link2);
   }
+
   &:active {
     color: var(--o-color-link3);
   }

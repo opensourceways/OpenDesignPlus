@@ -1,0 +1,197 @@
+{
+    "(0,600)": {
+        "prefix": [
+            "w-600",
+            "@include respond-to('phone')"
+        ],
+        "body": [
+            "@include respond-to('phone') {",
+            "    $1",
+            "}"
+        ],
+        "description": "手机端断点 (0,600)",
+        "scope": "css,scss,less"
+    },
+    "(0,840)": {
+        "prefix": [
+            "w-840",
+            "@include respond-to('<=pad_v')"
+        ],
+        "body": [
+            "@include respond-to('<=pad_v') {",
+            "    $1",
+            "}"
+        ],
+        "description": "折叠屏及以下断点 (0,840)",
+        "scope": "css,scss,less"
+    },
+    "(601,1200)": {
+        "prefix": [
+            "w-1200",
+            "@include respond-to('pad')"
+        ],
+        "body": [
+            "@include respond-to('pad') {",
+            "    $1",
+            "}"
+        ],
+        "description": "平板端断点 (601,1200)",
+        "scope": "css,scss,less"
+    },
+    "(0,1200)": {
+        "prefix": [
+            "w-<=1200",
+            "@include respond-to('<=pad')"
+        ],
+        "body": [
+            "@include respond-to('<=pad') {",
+            "    $1",
+            "}"
+        ],
+        "description": "平板及以下断点 (0,1200)",
+        "scope": "css,scss,less"
+    },
+    "min-1201": {
+        "prefix": [
+            "w->1200",
+            "@include respond-to('>pad')"
+        ],
+        "body": [
+            "@include respond-to('>pad') {",
+            "    $1",
+            "}"
+        ],
+        "description": "平板以上断点 (>1200)",
+        "scope": "css,scss,less"
+    },
+    "(601,840)": {
+        "prefix": [
+            "w-840",
+            "@include respond-to('pad_v')"
+        ],
+        "body": [
+            "@include respond-to('pad_v') {",
+            "    $1",
+            "}"
+        ],
+        "description": "平板竖屏断点 (601,840)",
+        "scope": "css,scss,less"
+    },
+    "(841,1200)": {
+        "prefix": [
+            "w-pad_h",
+            "@include respond-to('pad_h')"
+        ],
+        "body": [
+            "@include respond-to('pad_h') {",
+            "    $1",
+            "}"
+        ],
+        "description": "平板横屏断点 (841,1200)",
+        "scope": "css,scss,less"
+    },
+    "(1201,1440)": {
+        "prefix": [
+            "w-1440",
+            "@include respond-to('laptop')"
+        ],
+        "body": [
+            "@include respond-to('laptop') {",
+            "    $1",
+            "}"
+        ],
+        "description": "笔记本断点 (1201,1440)",
+        "scope": "css,scss,less"
+    },
+    "(0,1440)": {
+        "prefix": [
+            "w-<=1440",
+            "@include respond-to('<=laptop')"
+        ],
+        "body": [
+            "@include respond-to('<=laptop') {",
+            "    $1",
+            "}"
+        ],
+        "description": "笔记本及以下断点 (0,1440)",
+        "scope": "css,scss,less"
+    },
+    "min-1441": {
+        "prefix": [
+            "w->1440",
+            "@include respond-to('>laptop')"
+        ],
+        "body": [
+            "@include respond-to('>laptop') {",
+            "    $1",
+            "}"
+        ],
+        "description": "笔记本以上断点 (>1440)",
+        "scope": "css,scss,less"
+    },
+    "(601,1440)": {
+        "prefix": [
+            "w-pad-laptop",
+            "@include respond-to('pad-laptop')"
+        ],
+        "body": [
+            "@include respond-to('pad-laptop') {",
+            "    $1",
+            "}"
+        ],
+        "description": "平板到笔记本断点 (601,1440)",
+        "scope": "css,scss,less"
+    },
+    "(1441,1920)": {
+        "prefix": [
+            "w-pc",
+            "@include respond-to('pc')"
+        ],
+        "body": [
+            "@include respond-to('pc') {",
+            "    $1",
+            "}"
+        ],
+        "description": "PC端断点 (1441,1920)",
+        "scope": "css,scss,less"
+    },
+    "(1441,1680)": {
+        "prefix": [
+            "w-pc_s",
+            "@include respond-to('pc_s')"
+        ],
+        "body": [
+            "@include respond-to('pc_s') {",
+            "    $1",
+            "}"
+        ],
+        "description": "小型PC断点 (1441,1680)",
+        "scope": "css,scss,less"
+    },
+    "(1681,1920)": {
+        "prefix": [
+            "w-pc_l",
+            "@include respond-to('pc_l')"
+        ],
+        "body": [
+            "@include respond-to('pc_l') {",
+            "    $1",
+            "}"
+        ],
+        "description": "大型PC断点 (1681,1920)",
+        "scope": "css,scss,less"
+    },
+    "min-1921": {
+        "prefix": [
+            "w->pc",
+            "@include respond-to('>pc')"
+        ],
+        "body": [
+            "@include respond-to('>pc') {",
+            "    $1",
+            "}"
+        ],
+        "description": "超大屏幕断点 (>1920)",
+        "scope": "css,scss,less"
+    }
+}

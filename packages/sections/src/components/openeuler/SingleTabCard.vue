@@ -37,7 +37,7 @@ const props = defineProps({
                 <template #footer>
                     <div class="buttons">
                         <OButton v-for="(button, index) in tabs[0].card.buttons" :key="index" :href="button.href"
-                            round="pill" variant="outline" class="button">{{ button.text }}
+                            color="primary" round="pill" variant="outline" class="button">{{ button.text }}
                         </OButton>
                     </div>
                 </template>
@@ -52,7 +52,7 @@ const props = defineProps({
                         <template #footer>
                             <div class="buttons">
                                 <OButton v-for="(button, index) in tab.card.buttons" :key="index" :href="button.href"
-                                    round="pill" variant="outline" class="button">{{ button.text }}
+                                    color="primary" round="pill" variant="outline" class="button">{{ button.text }}
                                 </OButton>
                             </div>
                         </template>

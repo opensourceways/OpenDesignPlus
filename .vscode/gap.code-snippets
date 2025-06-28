@@ -74,5 +74,5 @@
 		"body": "var(--o3-gap-1)",
 		"description": "4px; 4px; 4px",
 		"scope": "css,scss,less",
-	}
+	},
 }
