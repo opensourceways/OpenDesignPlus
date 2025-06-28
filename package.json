@@ -1,0 +1,12 @@
+{
+  "name": "opendesign-plus",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "@tsconfig/node22": "catalog:",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
