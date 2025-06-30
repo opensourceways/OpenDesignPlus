@@ -57,6 +57,14 @@ export const routes = [
       title: '图文多卡',
     },
   },
+  {
+    path: '/MultiIconCard',
+    name: 'MultiIconCard',
+    component: () => import('../playground/openeuler/TheMultiIconCard.vue'),
+    meta: {
+      title: '图标多卡',
+    },
+  },
 ];
 
 const router = createRouter({
