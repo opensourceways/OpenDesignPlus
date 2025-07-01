@@ -64,7 +64,7 @@ const coverRatio = computed(() => {
 <style lang="scss" scoped>
 .multi-card-wrapper {
     width: 100%;
-    --card-gap: 24px;
+    --card-gap: var(--o3-gap-5);
 }
 
 .pane {

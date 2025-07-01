@@ -65,6 +65,14 @@ export const routes = [
       title: '图标多卡',
     },
   },
+  {
+    path: '/LogoCard',
+    name: 'LogoCard',
+    component: () => import('../playground/openeuler/TheLogoCard.vue'),
+    meta: {
+      title: 'Logo卡片',
+    },
+  },
 ];
 
 const router = createRouter({
