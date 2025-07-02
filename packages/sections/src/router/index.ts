@@ -73,6 +73,14 @@ export const routes = [
       title: 'Logo卡片',
     },
   },
+  {
+    path: '/Feature',
+    name: 'Feature',
+    component: () => import('../playground/openeuler/TheFeature.vue'),
+    meta: {
+      title: '亮点特性',
+    },
+  },
 ];
 
 const router = createRouter({
