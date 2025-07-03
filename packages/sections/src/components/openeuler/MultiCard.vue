@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
-import { OCard, ORow, OCol, OButton, OScroller } from '@opensig/opendesign';
+import { computed } from 'vue';
+import { OCard, OButton, OScroller } from '@opensig/opendesign';
 import { useScreen } from '@/composables/useScreen';
 
 const { lePadV } = useScreen();
@@ -19,8 +19,6 @@ const props = defineProps({
     },
 });
 
-const showType = ref<'auto' | 'always' | 'never' | 'hover'>('always');
-const container = ref<HTMLElement | null>(null);
 const cardCount = computed(() => props.cards.length);
 const cardWidth = computed(() => {
     if (lePadV.value) {
@@ -44,7 +42,7 @@ const coverRatio = computed(() => {
 <template>
     <div class="multi-card-wrapper">
         <OScroller class="pane" size="small" :show-type="lePadV ? 'never' : 'always'" disabled-y>
-            <template v-for="(card, index) in cards" :key="index">
+            <template v-for="card in cards" :key="card.title">
                 <OCard :title="card.title" :detail="card.content" :cover="card.cover"
                     :cover-ratio="lePadV ? undefined : coverRatio" :layout="'v'" class="multi-card-item"
                     :style="{ width: cardWidth }">

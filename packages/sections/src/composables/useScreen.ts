@@ -1,17 +1,19 @@
 import { ref, reactive, computed, onMounted, onUnmounted, nextTick } from 'vue';
 
-export enum Size {
-    Phone = 'phone',
-    PadV = 'pad_v',
-    PadH = 'pad_h',
-    Laptop = 'laptop',
-}
+export const Size = {
+    Phone: 'phone',
+    PadV: 'pad_v',
+    PadH: 'pad_h',
+    Laptop: 'laptop',
+} as const;
+
+export type Size = typeof Size[keyof typeof Size];
 
 export type ScreenSizeT =
     | typeof Size.Phone
-    | Size.PadV
-    | Size.PadH
-    | Size.Laptop;
+    | typeof Size.PadV
+    | typeof Size.PadH
+    | typeof Size.Laptop;
 
 export const ScreenConfig = {
     [Size.Phone]: 600,

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
 import { OCard, ORow, OCol, OFigure } from '@opensig/opendesign';
 import { useScreen } from '@/composables/useScreen';
 
@@ -12,7 +12,7 @@ interface CardT {
     time: string;
 }
 
-const props = defineProps({
+defineProps({
     cards: {
         type: Array as () => CardT[],
         default: () => [],

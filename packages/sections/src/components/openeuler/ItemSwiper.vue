@@ -35,7 +35,7 @@ defineProps({
   },
   // 指定在何处显示链接的资源
   target: {
-    type: String,
+    type: String as PropType<'_blank' | '_parent' | '_self' | '_top'>,
     default: '_blank',
   },
 });

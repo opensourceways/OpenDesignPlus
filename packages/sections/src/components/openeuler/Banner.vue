@@ -6,7 +6,7 @@ import AOS from 'aos';
 
 import ContentWrapper from '@openeuler/ContentWrapper.vue';
 
-const props = defineProps({
+defineProps({
   backgroundImage: {
     type: String,
     default: '',
@@ -59,7 +59,8 @@ onMounted(() => {
         <p v-if="subtitle" class="banner-subtitle" data-aos="fade-up">
           {{ subtitle }}
         </p>
-        <OButton v-if="href" variant="outline" color="primary" size="medium" :href="href" :target="target" class="learn-btn">
+        <OButton v-if="href" variant="outline" color="primary" size="medium" :href="href" :target="target"
+          class="learn-btn">
           <span>{{ text }}</span>
         </OButton>
       </div>
@@ -72,6 +73,7 @@ onMounted(() => {
   width: 100%;
   position: relative;
 }
+
 .banner-bg {
   height: 100%;
   margin: 0 auto;
@@ -87,6 +89,7 @@ onMounted(() => {
   top: 0;
   left: 0;
 }
+
 .banner-text-content {
   height: 100%;
 }
@@ -97,12 +100,14 @@ onMounted(() => {
 
 .banner-small {
   height: 280px;
+
   .banner-title {
     color: var(--o-color-info1);
     font-weight: 500;
     padding-top: 48px;
     @include display2;
   }
+
   .banner-subtitle {
     color: var(--o-color-info1);
     margin-top: 8px;
@@ -112,10 +117,12 @@ onMounted(() => {
 
   @media (min-width: 1201px) and (max-width: 1680px) {
     height: 220px;
+
     .banner-title {
       padding-top: 40px;
       @include display3;
     }
+
     .banner-subtitle {
       @include text1;
     }
@@ -123,10 +130,12 @@ onMounted(() => {
 
   @include respond-to('pad_h') {
     height: 180px;
+
     .banner-title {
       padding-top: 32px;
       @include h1;
     }
+
     .banner-subtitle {
       @include tip1;
     }
@@ -139,12 +148,14 @@ onMounted(() => {
 
 .banner-medium {
   height: 360px;
+
   .banner-title {
     color: var(--o-color-info1);
     font-weight: 500;
     padding-top: 88px;
     @include display2;
   }
+
   .banner-subtitle {
     color: var(--o-color-info1);
     margin-top: 8px;
@@ -154,10 +165,12 @@ onMounted(() => {
 
   @media (min-width: 1201px) and (max-width: 1680px) {
     height: 280px;
+
     .banner-title {
       padding-top: 64px;
       @include display3;
     }
+
     .banner-subtitle {
       @include text1;
     }
@@ -165,10 +178,12 @@ onMounted(() => {
 
   @include respond-to('pad_h') {
     height: 220px;
+
     .banner-title {
       padding-top: 48px;
       @include h1;
     }
+
     .banner-subtitle {
       @include tip1;
     }
@@ -176,11 +191,13 @@ onMounted(() => {
 
   @include respond-to('<=pad_v') {
     height: 120px;
+
     .banner-title {
       text-align: center;
       padding-top: 48px;
       @include h3;
     }
+
     .banner-subtitle {
       display: none;
     }
@@ -189,12 +206,14 @@ onMounted(() => {
 
 .banner-large {
   height: 460px;
+
   .banner-title {
     color: var(--o-color-info1);
     font-weight: 500;
     padding-top: 124px;
     @include display1;
   }
+
   .banner-subtitle {
     color: var(--o-color-info1);
     margin-top: 8px;
@@ -204,10 +223,12 @@ onMounted(() => {
 
   @media (min-width: 1201px) and (max-width: 1680px) {
     height: 400px;
+
     .banner-title {
       padding-top: 100px;
       @include display2;
     }
+
     .banner-subtitle {
       @include text2;
     }
@@ -215,10 +236,12 @@ onMounted(() => {
 
   @include respond-to('pad_h') {
     height: 320px;
+
     .banner-title {
       padding-top: 80px;
       @include display3;
     }
+
     .banner-subtitle {
       @include text1;
     }
@@ -226,11 +249,13 @@ onMounted(() => {
 
   @include respond-to('<=pad_v') {
     height: 184px;
+
     .banner-title {
       text-align: center;
       padding-top: 48px;
       @include h3;
     }
+
     .banner-subtitle {
       text-align: center;
       @include tip2;

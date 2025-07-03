@@ -32,7 +32,7 @@ defineProps({
   },
   // 指定在何处显示链接的资源
   target: {
-    type: String,
+    type: String as PropType<'_blank' | '_parent' | '_self' | '_top'>,
     default: '_blank',
   },
 });
@@ -45,11 +45,11 @@ const list = computed(() => {
   let arr = [] as ItemSwiperT[];
   for (let i = 0; i < row; i++) {
     arr.push({
-      children: [...publisher.slice(i * num, (i + 1) * num), ...publisher.slice(i * num, (i + 1) * num)],
+      children: [...publisher.slice(i * num, (i + 1) * num).map(item => ({ ...item, hrefEn: item.hrefEn || '' })), ...publisher.slice(i * num, (i + 1) * num).map(item => ({ ...item, hrefEn: item.hrefEn || '' }))],
       reverseDirection: false,
     });
     if (i === row - 1) {
-      arr[i].children = [...publisher.slice(i * num), ...publisher.slice(i * num)];
+      arr[i].children = [...publisher.slice(i * num).map(item => ({ ...item, hrefEn: item.hrefEn || '' })), ...publisher.slice(i * num).map(item => ({ ...item, hrefEn: item.hrefEn || '' }))];
     }
     if (i % 2 === 1) {
       arr[i].reverseDirection = true;
@@ -74,23 +74,17 @@ const col = computed(() => {
 <template>
   <div class="logo-swiper">
     <template v-if="total > 10">
-      <ItemSwiper
-        v-for="(item, index) in list"
-        :key="index"
-        :data="item.children"
-        :reverse-direction="item.reverseDirection"
-        :lang="lang"
-        :theme="theme"
-        :target="target"
-        class="partner-swiper"
-      />
+      <ItemSwiper v-for="(item, index) in list" :key="index" :data="item.children"
+        :reverse-direction="item.reverseDirection" :lang="lang" :theme="theme" :target="target"
+        class="partner-swiper" />
     </template>
     <template v-else>
       <ContentWrapper>
         <ORow gap="24px 24px" wrap="wrap" class="logo-data">
-          <OCol v-for="item in publisher" :key="item.id" :flex="`0 0 ${100 / col}%`">
+          <OCol v-for="item in publisher" :key="item.href" :flex="`0 0 ${100 / col}%`">
             <div class="item-logo">
-              <OLink v-if="item.href || item.hrefEn" :href="lang === 'en' ? item.hrefEn || item.href : item.href" :target="target">
+              <OLink v-if="item.href || item.hrefEn" :href="lang === 'en' ? item.hrefEn || item.href : item.href"
+                :target="target">
                 <div class="logo-card">
                   <OFigure :src="item.logo[theme]" />
                 </div>
@@ -113,7 +107,7 @@ const col = computed(() => {
 }
 
 .partner-swiper {
-  & + .partner-swiper {
+  &+.partner-swiper {
     margin-top: 24px;
 
     @include respond-to('laptop') {
@@ -136,6 +130,7 @@ const col = computed(() => {
   align-items: center;
   background-color: var(--o-color-fill2);
   border-radius: var(--o-radius-xs);
+
   .o-figure {
     :deep(img) {
       width: auto;

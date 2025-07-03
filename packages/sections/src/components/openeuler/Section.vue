@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { isArray, OLink } from '@opensig/opendesign';
-import IconChevronRight from '@/assets/svg-icons/icon-chevron-right.svg';
 
 interface SectionPropsT {
   title?: string | Array<string>;

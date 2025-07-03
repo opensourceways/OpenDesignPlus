@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, type PropType } from 'vue';
+import { type PropType } from 'vue';
 import { OButton, OCard, OTab, OTabPane } from '@opensig/opendesign';
 import { useScreen } from '@/composables/useScreen';
 
@@ -22,7 +22,7 @@ interface TabListT {
     card: CardT;
 }
 
-const props = defineProps({
+defineProps({
     tabs: {
         type: Array as PropType<TabListT[]>,
         default: () => [],

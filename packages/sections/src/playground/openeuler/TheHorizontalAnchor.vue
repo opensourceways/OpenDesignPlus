@@ -12,7 +12,7 @@ const anchor = [
 
 <template>
   <div v-for="item in anchor" :key="item.id" :id="item.id" class="demo-item">{{ item.title }}</div>
-  <HorizontalAnchor :anchor-data="anchor" wrap-class="warp-class" transparent="true" />
+  <HorizontalAnchor :anchor-data="anchor" wrap-class="warp-class" :transparent="true" />
 </template>
 
 <style lang="scss" scoped>

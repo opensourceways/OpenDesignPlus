@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
 import { } from '@opensig/opendesign';
 import Section from '@openeuler/Section.vue';
 import Feature from '@/components/openeuler/Feature.vue';

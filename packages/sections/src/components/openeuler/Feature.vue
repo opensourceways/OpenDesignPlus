@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
 import { useScreen } from '@/composables/useScreen.ts';
 
 const { gtPadV } = useScreen();

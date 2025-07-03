@@ -16,7 +16,6 @@ watch(
 );
 
 const navList = routes
-  .filter((item) => !item.exclude)
   .map((item) => {
     const { path, name, meta } = item;
     return {
@@ -36,7 +35,8 @@ const navClick = (item: (typeof navList)[0]) => {
       {{ title }}
     </div>
     <div class="nav-list">
-      <div v-for="item in navList" :key="item.path" class="nav-item" :class="{ active: currentNav === item.name }" @click="navClick(item)">
+      <div v-for="item in navList" :key="item.path" class="nav-item" :class="{ active: currentNav === item.name }"
+        @click="navClick(item)">
         {{ item.label }}
       </div>
     </div>
@@ -49,19 +49,23 @@ const navClick = (item: (typeof navList)[0]) => {
   overflow: auto;
   height: 100vh;
 }
+
 .aside-title {
   padding: 16px;
   text-align: center;
   border-bottom: 1px solid var(--o-color-control1-light);
   font-size: var(--o-font_size-h1);
 }
+
 .nav-item {
   padding: 8px 16px;
   cursor: pointer;
+
   &:hover {
     color: var(--o-color-info1-inverse);
     background-color: var(--o-color-primary1-light);
   }
+
   &.active {
     color: var(--o-color-info1-inverse);
     background-color: var(--o-color-primary1);
