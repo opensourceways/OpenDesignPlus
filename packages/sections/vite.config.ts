@@ -3,11 +3,11 @@ import vue from '@vitejs/plugin-vue';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = path.resolve(fileURLToPath(import.meta.url), '../')
+const __dirname = path.resolve(fileURLToPath(import.meta.url), '../');
 
 export default defineConfig({
   build: {
-    outDir: path.resolve(__dirname, '../dist'),
+    outDir: path.resolve(__dirname, './dist'),
     cssCodeSplit: true,
   },
   resolve: {
@@ -31,4 +31,5 @@ export default defineConfig({
   server: {
     proxy: {},
   },
+  base: '/',
 });
