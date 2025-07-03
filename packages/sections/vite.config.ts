@@ -31,4 +31,5 @@ export default defineConfig({
   server: {
     proxy: {},
   },
+  base: '/OpenDesignPlus/',
 });
