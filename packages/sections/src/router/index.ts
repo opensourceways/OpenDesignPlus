@@ -81,6 +81,30 @@ export const routes = [
       title: '亮点特性',
     },
   },
+  {
+    path: '/Process',
+    name: 'Process',
+    component: () => import('../playground/openeuler/TheProcess.vue'),
+    meta: {
+      title: '流程',
+    },
+  },
+  {
+    path: '/MainCard',
+    name: 'MainCard',
+    component: () => import('../playground/openeuler/TheMainCard.vue'),
+    meta: {
+      title: '重点卡片',
+    },
+  },
+  {
+    path: '/SliderCard',
+    name: 'SliderCard',
+    component: () => import('../playground/openeuler/TheSliderCard.vue'),
+    meta: {
+      title: '轮播卡片',
+    },
+  },
 ];
 
 const router = createRouter({
